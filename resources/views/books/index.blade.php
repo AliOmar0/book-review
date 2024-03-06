@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1 class="mb-10 text-2xl">Books</h1>
+<script src="https://kit.fontawesome.com/b5b48d6397.js" crossorigin="anonymous"></script>
 
+    <h1 class="mb-10 text-2xl fa-solid"> Novel Nook &nbsp;<i class="fa-solid fa-book-open"></i></h1>
+    
     <form class="mb-4 flex item-center space-x-2" method="GET" action="{{ route('books.index') }}">
         <input class="input h-10" type="text" name="title" placeholder="Search By Title" value="{{ request('title') }}">
         <input type="hidden" name="filter" value="{{ request('filter') }}">
